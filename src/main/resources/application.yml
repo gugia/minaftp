@@ -1,0 +1,31 @@
+server:
+  port: 12100
+  servlet:
+    #context-path: /api
+    session:
+      cookie:
+        name: MINAFTP_SESSION
+
+spring:
+  application:
+    name: minaftp
+  main:
+    allow-bean-definition-overriding: true
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3309/dsdd?useUnicode=true&useSSL=false&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&autoReconnect=true&serverTimezone=GMT%2B8
+    username: rdcenter
+    password: 3M5k!se4tY
+    type: com.zaxxer.hikari.HikariDataSource # hikari 连接池
+    hikari:
+      pool-name: data-storage-pool # 连接池名字
+      auto-commit: true # 自动提交
+      connection-test-query: SELECT 1
+      connection-timeout: 10000 # 等待连接池分配连接的最大时长
+      idle-timeout: 60000 # 一个连接空闲被释放所需时间
+      max-lifetime: 180000
+      maximum-pool-size: 10  # 连接池中允许的最大连接数, 缺省值 10
+      minimum-idle: 2 # 最小连接数
