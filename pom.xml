@@ -20,7 +20,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <velocity.version>2.1</velocity.version>
         <mybatis-plus.version>3.2.0</mybatis-plus.version>
-        <mysql-driver.version>8.0.18</mysql-driver.version>
+        <mysql-driver.version>8.0.28</mysql-driver.version>
     </properties>
 
     <dependencies>
